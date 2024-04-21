@@ -32,7 +32,7 @@ export class SongsService {
     }
 
     getSongsByGenre(query: SongQueryDto): SongResponseDto[] {
-        if(!query.genre) throw new BadRequestException(`You need to select a genre.`);
+        if(!query.genre) throw new BadRequestException('You need to select a genre.');
 
         return this.songs.filter(song => song.genre === query.genre);
     }
