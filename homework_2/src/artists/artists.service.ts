@@ -87,3 +87,4 @@ export class ArtistsService {
         this.artists = this.artists.filter(artist => artist.id !== id);
     }
 }
+

@@ -574,7 +574,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/artists",
+							"raw": "http://localhost:3000/api/artists?genre=Rock",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -583,6 +583,12 @@
 							"path": [
 								"api",
 								"artists"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "Rock"
+								}
 							]
 						}
 					},
@@ -608,7 +614,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1713716088902"
+									"value": "bb13e65d-1a4e-494a-b1dc-c8704cf2cf5b"
 								}
 							]
 						}
@@ -622,7 +628,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Ariana Grande\",\r\n    \"age\": 30,\r\n    \"country\": \"USA\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Katy Perry\",\r\n    \"age\": 34,\r\n    \"country\": \"USA\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -651,7 +657,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Ed Sheeran\",\r\n    \"age\": 34,\r\n    \"country\": \"UK\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Ariana Grande\",\r\n    \"age\": 34,\r\n    \"country\": \"USA\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -673,7 +679,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1713715503335"
+									"value": "82a4cfb7-b688-4198-a4df-1d8bfaa027e5"
 								}
 							]
 						}
@@ -700,7 +706,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1713716105571"
+									"value": "82a4cfb7-b688-4198-a4df-1d8bfaa027e5"
 								}
 							]
 						}
@@ -732,7 +738,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1713716774433"
+									"value": "0ff3e9c2-ec93-4735-a1da-50c834a78ffc"
 								}
 							]
 						}
@@ -745,7 +751,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/songs",
+							"raw": "http://localhost:3000/api/songs?genre=Rock",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -754,6 +760,12 @@
 							"path": [
 								"api",
 								"songs"
+							],
+							"query": [
+								{
+									"key": "genre",
+									"value": "Rock"
+								}
 							]
 						}
 					},
@@ -780,7 +792,7 @@
 							"variable": [
 								{
 									"key": "artistId",
-									"value": "1713716381400"
+									"value": "cdbbbbaa-9b87-4c39-97b6-7376edfc2ca5"
 								}
 							]
 						}
@@ -794,7 +806,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Boyfriend\",\r\n    \"duration\": 233,\r\n    \"genre\": \"Pop\",\r\n    \"releaseDate\": \"2017-06-01\",\r\n    \"artistId\": \"1713717566562\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Teenage Dream\",\r\n    \"duration\": 275,\r\n    \"genre\": \"Pop\",\r\n    \"releaseDate\": \"2010-11-15\",\r\n    \"artistId\": \"cdbbbbaa-9b87-4c39-97b6-7376edfc2ca5\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -823,7 +835,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Boyfriend\",\r\n    \"duration\": 233,\r\n    \"genre\": \"Pop\",\r\n    \"releaseDate\": \"2017-06-01\",\r\n    \"artistId\": \"1713717566562\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Teenage Dream\",\r\n    \"duration\": 275,\r\n    \"genre\": \"Pop\",\r\n    \"releaseDate\": \"2010-11-15\",\r\n    \"artistId\": \"cdbbbbaa-9b87-4c39-97b6-7376edfc2ca5\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -845,7 +857,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1713717499265"
+									"value": "140c0264-e231-4179-bb3e-2518d1c94121"
 								}
 							]
 						}
