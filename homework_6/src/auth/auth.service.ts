@@ -7,39 +7,40 @@ import { ICurrentUser } from '../common/types/current-user.interface';
 
 @Injectable()
 export class AuthService {
-    constructor(
-        private readonly userService: UsersService,
-        private readonly jwtService: JwtService
-    ) {}
+  constructor(
+    private readonly userService: UsersService,
+    private readonly jwtService: JwtService,
+  ) {}
 
-    async register({ username, password, role }: RegisterDto): Promise<any> {
-        const existingUser = await this.userService.getUserByUsername(username);
+  async register({ username, password, role }: RegisterDto): Promise<any> {
+    const existingUser = await this.userService.getUserByUsername(username);
 
-        if(existingUser) throw new BadRequestException(`User ${username} already exists.`)
+    if (existingUser)
+      throw new BadRequestException(`User ${username} already exists.`);
 
-        const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-        const user = {
-            username,
-            password: hashedPassword,
-            role
-        }
+    const user = {
+      username,
+      password: hashedPassword,
+      role,
+    };
 
-        return this.userService.createUser(user);
-    }
+    return this.userService.createUser(user);
+  }
 
-    login(user: ICurrentUser) {
-        const payload = {
-            sub: user.userId,
-            username: user.username,
-            role: user.role
-        }
+  login(user: ICurrentUser) {
+    const payload = {
+      sub: user.userId,
+      username: user.username,
+      role: user.role,
+    };
 
-        const accessToken = this.jwtService.sign(payload);
+    const accessToken = this.jwtService.sign(payload);
 
-        return {
-            user,
-            accessToken
-        }
-    }
+    return {
+      user,
+      accessToken,
+    };
+  }
 }

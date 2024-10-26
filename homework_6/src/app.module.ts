@@ -8,7 +8,7 @@ import { AuthController } from './auth/auth.controller';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [ConfigModule.forRoot({ isGlobal: true }), DatabaseModule, ArtistsModule, SongsModule, AlbumsModule,AuthModule],
+  imports: [ConfigModule.forRoot({ isGlobal: true }), DatabaseModule, ArtistsModule, SongsModule, AlbumsModule, AuthModule],
   controllers: [AuthController],
   providers: [],
 })

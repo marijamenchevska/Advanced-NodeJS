@@ -20,12 +20,12 @@ import { LocalStrategy } from './local.strategy';
       useFactory: async (configService: ConfigService) => ({
         global: true,
         signOptions: { expiresIn: '1d' },
-        secret: configService.get('JWT_SECRET')
-      })
-    })
+        secret: configService.get('JWT_SECRET'),
+      }),
+    }),
   ],
   controllers: [AuthController],
   providers: [AuthService, UsersService, JwtStrategy, LocalStrategy],
-  exports: [AuthService]
+  exports: [AuthService],
 })
 export class AuthModule {}
